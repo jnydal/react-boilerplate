@@ -18,7 +18,11 @@ const ChatList = React.createClass({
   },
 
   render() {
-    let list = this.state.chats.map((item, index) => {
+    const {
+      messages
+    } = this.props;
+
+    let list = messages.map((item, index) => {
       return (
         <li className="list-group-item" key={item._id} >
           <span>{item.name}: </span>{item.text}

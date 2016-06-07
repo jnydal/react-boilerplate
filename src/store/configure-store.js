@@ -1,30 +1,13 @@
-/**
- * ./store/configure-store.js
- */
-
-/**
- * Dependencies
- */
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger';
-
-/**
- * Importing our reducer
- */
 import reducer from '../reducers'
 
-/**
- * Apply the thunk and logging middleware to our store
- */
 const createStoreWithMiddleware = applyMiddleware(
   thunk,
   logger()
 )(createStore)
 
-/**
- * Export the module as a function to create our store with
- */
 module.exports = function configureStore(initialState) {
   const store = createStoreWithMiddleware(reducer, initialState)
 

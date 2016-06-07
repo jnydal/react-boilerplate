@@ -1,9 +1,5 @@
-/**
- * ./reducers/index.js
- */
-
 import {
-  POPULATE_MESSAGES
+  POPULATE_MESSAGES_SUCCESS
 } from '../actions';
 
 const defaultState = {
@@ -12,7 +8,7 @@ const defaultState = {
 
 export default function rootReducer(state = defaultState, action) {
   switch (action.type) {
-    case POPULATE_MESSAGES:
+    case POPULATE_MESSAGES_SUCCESS:
       return Object.assign({}, state, {
         messages: action.messages
       });

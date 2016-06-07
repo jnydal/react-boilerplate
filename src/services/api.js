@@ -1,7 +1,3 @@
-/**
- * ./services/api.js
- */
-
 import request from 'axios';
 
 const apiURL = 'https://react-workshop-chat.herokuapp.com/chat';

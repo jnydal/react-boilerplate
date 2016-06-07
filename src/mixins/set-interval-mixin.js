@@ -1,12 +1,12 @@
-const SetIntervalMixin = {
+var SetIntervalMixin = {
   componentWillMount() {
-    this._intervals = [];
+    this.intervals = [];
   },
   _setInterval() {
-    this._intervals.push(setInterval.apply(null, arguments));
+    this.intervals.push(setInterval.apply(null, arguments));
   },
   componentWillUnmount() {
-    this._intervals.map(clearInterval);
+    this.intervals.map(clearInterval);
   }
 };
 
